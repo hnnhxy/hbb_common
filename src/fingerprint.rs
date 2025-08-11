@@ -248,7 +248,7 @@ pub fn get_fingerprinting_info() -> FingerprintingInfo {
             FINGERPRINTING_INFO = Some(FingerprintingInfo::new());
             CACHED_FINGERPRINTS = Some(HashMap::new());
         });
-        #[allow(static_mut_refs)]
+        // [allow(static_mut_refs)]
         FINGERPRINTING_INFO.clone().unwrap_or_default()
     }
 }
